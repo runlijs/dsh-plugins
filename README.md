@@ -20,8 +20,8 @@
 - 仓库可被 `git clone`（私有库需提前配好 SSH key 或凭据）
 
 ```bash
-dsh plugin --profile web add "github:<你的用户名>/dsh-plugins#path:/sticky-notes"
-dsh plugin --profile web add "github:<你的用户名>/dsh-plugins#path:/offwork-countdown"
+dsh plugin --profile web add "github:runlijs/dsh-plugins#path:/sticky-notes"
+dsh plugin --profile web add "github:runlijs/dsh-plugins#path:/offwork-countdown"
 dsh web
 ```
 
@@ -40,7 +40,7 @@ dsh --profile web --dump-config | grep -E "sticky-notes|offwork-countdown"
 
 ```bash
 # 按 tag 锁定（发布时打 tag：git tag v1.0.0 && git push --tags）
-dsh plugin --profile web add "github:<user>/dsh-plugins#v1.0.0&path:/sticky-notes"
+dsh plugin --profile web add "github:runlijs/dsh-plugins#v1.0.0&path:/sticky-notes"
 
 # 更新到最新：重复执行同一条 add（会重新解析 HEAD），然后重启 dsh web
 ```
@@ -49,7 +49,7 @@ dsh plugin --profile web add "github:<user>/dsh-plugins#v1.0.0&path:/sticky-note
 
 pnpm 8 不支持 `#path:` 子目录语法，两种选择：
 
-- 把两个目录拆成两个仓库，各自在根目录，然后 `dsh plugin --profile web add github:<user>/sticky-notes`；
+- 把两个目录拆成两个仓库，各自在根目录，然后 `dsh plugin --profile web add github:runlijs/sticky-notes`；
 - 或在目标机升级 pnpm：`npm i -g pnpm@latest`（profile 的 lockfile 会被重写一版，可接受）。
 
 ---
