@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Off-work Countdown",
+    "description": "Adds an Off-work Countdown entry to the left sidebar; the central panel shows the live countdown to off-work time, the day's progress, and lets you adjust the off-work time."
+  }
+}
